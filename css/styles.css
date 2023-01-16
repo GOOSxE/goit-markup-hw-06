@@ -329,8 +329,8 @@ img {
 }
 .team-list .card{
   background: var(--white-color);
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list  .img{
   margin-bottom: 32px;
@@ -398,13 +398,13 @@ border-radius: 0px 0px 4px 4px;
 }
 .customers .title {
   font-weight: 700;
-font-size: 36px;
-line-height: 1.11;
-text-align: center;
-letter-spacing: 0.02em;
-margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 72px;
 
-color: var(--navy-blue-color);
+  color: var(--navy-blue-color);
 }
 .customers .list {
   display: flex;
@@ -607,6 +607,9 @@ color: var(--navy-blue-color);
 
   color: var(--cornflower-color);
 }
+.social-media {
+  margin-right: 80px;
+}
 .social-media .title {
   margin-bottom: 16px;
 
@@ -647,6 +650,70 @@ color: var(--navy-blue-color);
   height: 24px;
 
   fill: var(--white-color);
+}
+
+/* ----SUBSCRIBE-FORM---- */
+
+.subscribe-form .title {
+  display: block;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--white-color);
+}
+.subscribe-form .thumb {
+  display: flex;
+}
+.subscribe-form .email-input {
+  min-width: 264px;
+  margin-right: 24px;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+
+  
+  background-color: var(--navy-blue-color);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.subscribe-form .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 165px;
+  padding: 8px 24px;
+  gap: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  
+  color: var(--white-color);
+  background-color: var(--brand-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, box-shadow ;
+}
+.subscribe-form .icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  fill: var(--white-color);
+}
+.subscribe-form .btn:hover,
+.subscribe-form .btn:focus {
+  background-color: var(--ocean-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------MODAL------- */
@@ -710,49 +777,4 @@ color: var(--navy-blue-color);
   scale: 2;
   opacity: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
