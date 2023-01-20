@@ -334,8 +334,13 @@
         </div>
           <form class="subscribe-form">
               <h4 class="title">Subscribe</h4>
-              <div class="thumb">
-                <input type="email" name="subscribe-email" placeholder="E-mail" class="email-input">
+              <div class="form-field">
+                <input 
+                type="email" 
+                name="subscribe-email"
+                placeholder="E-mail" 
+                class="email-input" 
+                required>
                 <button type="submit" class="btn">
                   Subscribe
                   <svg class="icon">
@@ -350,9 +355,55 @@
         <div class="modal">
             <button type="button" class="modal-close" data-modal-close>
                 <svg class="icon">
-                    <use href="./images/svg/symbol-defs.svg#modal-close"></use>
+                    <use href="./images/svg/symbol-defs.svg#close"></use>
                 </svg>
             </button>
+            <p class="title">Leave your contacts and we will call you back</p>
+            <form name="modal-form" class="inputs">
+                <label class="label">
+                    <span class="text">Name</span>
+                    <div class="relative">
+                     <input type="text" name="name" class="input" required>
+                     <svg class="icon" width="13" height="13">
+                         <use href="./images/svg/symbol-defs.svg#name"></use>
+                     </svg>
+                    </div>
+                </label>
+                <label class="label">
+                    <span class="text">Phone</span>
+                    <div class="relative">
+                     <input type="phone" name="phone" class="input" required>
+                     <svg class="icon" width="13" height="13">
+                         <use href="./images/svg/symbol-defs.svg#phone"></use>
+                     </svg>
+                    </div>
+                </label>
+                <label class="label">
+                    <span class="text">Email</span>
+                    <div class="relative">
+                     <input type="email" name="email" class="input" required>
+                     <svg class="icon" width="15" height="12">
+                         <use href="./images/svg/symbol-defs.svg#email"></use>
+                     </svg>
+                    </div>
+                </label>
+                <label class="label">
+                    <span class="text">Comment</span>
+                    <textarea name="comment" class="comment" placeholder="Text input"></textarea>
+                </label>
+                <label name="checkbox" class="checkbox label">
+                    <span class="span">
+                        <svg class="icon">
+                            <use href="./images/svg/symbol-defs.svg#vector"></use>
+                        </svg>
+                    </span>
+                    <span class="text">I accept the terms and conditions of the </span>
+                    <a href="" class="privacy-link">Privacy Policy</a>
+                </label>
+                <div class="wrap">
+                    <button type="submit" class="submit btn">Send</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
