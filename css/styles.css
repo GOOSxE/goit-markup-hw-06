@@ -40,6 +40,19 @@ img {
   max-width: 100%;
   height: auto;
   }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+    
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
 .section.no-padding {
   padding-top: 0;
   padding-bottom: 0;
@@ -231,19 +244,6 @@ img {
   padding-bottom: 0px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .benefits-list {
   display: flex;
 }
@@ -751,10 +751,10 @@ img {
 
   transform: translate(-50%, -50%);
   transition: scale 350ms;
+  border-radius: 4px;
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%,-50%) scale(2);
-  
 }
 .modal-close {
   position: absolute;
@@ -802,30 +802,30 @@ img {
 .modal .label {
   display: block;
   margin-bottom: 8px;
-}
-.label .text {
-  display: block;
-  margin-bottom: 4px;
 
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  text-align: left;
   
   color: var(--light-slate-color);
 }
 .modal .relative {
  position: relative;
+ margin-top: 4px;
+
+ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .input {
   width: 100%;
   min-height: 40px;
-  
   padding-left: 38px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .relative .icon {
   position: absolute;
@@ -833,16 +833,19 @@ img {
   top: 50%;
   transform: translateY(-50%);
 }
+.modal .last {
+  margin-bottom: 13px;
+}
 .modal .comment {
   width: 100%;
-  height: 120px;
   resize: none;
   padding: 8px 16px;
-  margin-bottom: 16px;
+  margin-top: 4px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal .comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -851,20 +854,40 @@ img {
   line-height: 1.33;
   letter-spacing: 0.04em;
 }
+.modal .relative:focus-within {
+  fill: var(--brand-color);
+}
+.modal .input:required:focus, .modal .comment:focus,
+.modal .input:required:hover, .modal .comment:hover {
+  border: 1px solid var(--brand-color);
+}
 .modal .checkbox {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: #757575;
 }
 .checkbox .span {
   display: flex;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
-  
-  border: 1.25px solid var(--navy-blue-color);
+
   border-radius: 2px;
+  border: 1.25px solid var(--navy-blue-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, border;
+}
+.check:checked + .checkbox .span{
+  background-color: var(--ocean-color);
+  border: 1.25px solid var(--ocean-color);
 }
 .checkbox .icon {
   display: inline-block;
@@ -874,12 +897,12 @@ img {
   fill: var(--modal-bg);
 }
 .privacy-link {
-  margin-left: 3px;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
+
+  color: var(--brand-color);
 }
 .is-hidden {
   visibility: hidden;
@@ -904,7 +927,13 @@ img {
   color: var(--white-color);
   background: var(--brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal .submit:hover,
+  .modal .submit:focus {
+    background-color: var(--ocean-color);
   }
 
