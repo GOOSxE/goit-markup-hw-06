@@ -834,7 +834,7 @@ img {
 .required .icon {
   position: absolute;
   left: 16px;
-  top: 37px;
+  top: 36px;
   transform: translateY(-50%);
 }
 .modal .last {
