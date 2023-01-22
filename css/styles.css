@@ -800,9 +800,10 @@ img {
   display: block;
 }
 .modal .label {
+  position: relative;
   display: block;
   margin-bottom: 8px;
-
+  
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -810,14 +811,15 @@ img {
   text-align: left;
   
   color: var(--light-slate-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal .relative {
- position: relative;
- margin-top: 4px;
- transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal .relative:focus-within {
+.modal .label:focus-within {
   fill: var(--brand-color);
+}
+.label .span {
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1;
 }
 .modal .input {
   width: 100%;
@@ -829,20 +831,19 @@ img {
   outline: none;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.relative .icon {
+.required .icon {
   position: absolute;
   left: 16px;
-  top: 50%;
+  top: 37px;
   transform: translateY(-50%);
 }
 .modal .last {
-  margin-bottom: 13px;
+  margin-bottom: 16px;
 }
 .modal .comment {
   width: 100%;
   resize: none;
   padding: 8px 16px;
-  margin-top: 4px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -863,6 +864,7 @@ img {
 .modal .checkbox {
   display: flex;
   margin-bottom: 24px;
+  align-items: center;
 
   font-weight: 400;
   font-size: 12px;
